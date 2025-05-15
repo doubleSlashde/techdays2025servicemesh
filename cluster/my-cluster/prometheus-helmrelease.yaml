@@ -11,11 +11,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: kube-prometheus
+      chart: bitnamicharts/kube-prometheus
       version: 11.1.11
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: dockerhub
         namespace: default
   interval: 1m
   values:
@@ -26,7 +26,6 @@ spec:
       persistence:
         enabled: true
         size: 5Gi
-        storageClass: ems-default
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
