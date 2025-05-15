@@ -55,11 +55,8 @@ spec:
     istio: ingressgateway
   servers:
     - port:
-        number: 443
-        name: https
-        protocol: HTTPS
-      tls:
-        mode: MUTUAL
-        credentialName: ems-int
+        number: 80
+        name: http
+        protocol: HTTP
       hosts:
-        - "prometheus.int.api-ems.prod.deutschepost.de"
+      - "static.69.93.203.116.clients.your-server.de"
