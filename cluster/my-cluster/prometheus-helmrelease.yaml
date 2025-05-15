@@ -9,6 +9,9 @@ metadata:
   name: kube-prometheus
   namespace: prometheus
 spec:
+  dependsOn:
+    - name: istio-base
+      namespace: istio-system
   chart:
     spec:
       chart: bitnamicharts/kube-prometheus
