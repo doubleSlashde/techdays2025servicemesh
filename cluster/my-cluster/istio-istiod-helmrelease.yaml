@@ -10,6 +10,9 @@ metadata:
   name: istio-istiod
   namespace: istio-system
 spec:
+  dependsOn:
+    - name: istio-base
+      namespace: istio-system
   chart:
     spec:
       chart: istiod
